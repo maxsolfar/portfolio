@@ -12,7 +12,7 @@ import SwiperCore, { Autoplay } from 'swiper';
 
 // Import Swiper styles
 import 'swiper/css';
-import './swiper.css';
+import './utils/swiper.css';
 // Icons
 import javascript from '../assets/skills/javascript.svg';
 import typescript from '../assets/skills/typescript.svg';
@@ -121,12 +121,13 @@ const SkillSlider = () => {
       flexDirection={['column', 'column', 'row', 'row']}
       justifyContent={'center'}
       flexWrap={["wrap","wrap","wrap","nowrap",]}
-      py={[16,16,16,24]}
+      pt={4}
+      pb={[20,20,20,28]}
       gap={[4,10,12,16]}
     >
       <Container>
-        <Heading size="md" mb={4}>
-          Front end Skills
+        <Heading size="md" mb={4} opacity={".7"}>
+          Front End
         </Heading>
         <Swiper
            slidesPerView={2}
@@ -187,8 +188,8 @@ const SkillSlider = () => {
         </Swiper>
       </Container>
       <Container>
-        <Heading size="md" mb={4}>
-          Back end Skills
+        <Heading size="md" mb={4} opacity={".7"}>
+          Back End
         </Heading>
         <Swiper
            slidesPerView={2}

@@ -19,6 +19,7 @@ import vectorHeaderDDark from '../assets/vector-header-d-dark.png';
 import codeAssetsA from '../assets/assets-header.png';
 import manVector from '../assets/man-vector.png';
 import manVectorDark from '../assets/man-vector-dark.png';
+import { FiDownload } from 'react-icons/fi';
 
 function Header() {
 
@@ -123,6 +124,7 @@ function Header() {
           variant={"outline"}
           w={['100%', '100%', '35%', '35%']}
           onClick={onButtonClick}
+          leftIcon={<FiDownload/>}
         >
           Download CV
         </Button>
@@ -136,7 +138,7 @@ function Header() {
         >
           <Image
             src={colorMode === 'dark' ? vectorHeader : vectorHeaderDark}
-            alt="Vector Header"
+            alt="Main console image"
           ></Image>
         </Box>
         <Box
@@ -151,7 +153,7 @@ function Header() {
         >
           <Image
             src={colorMode === 'dark' ? vectorHeaderD : vectorHeaderDDark}
-            alt="Vector Header"
+            alt="laptop image"
           ></Image>
         </Box>
         <Box
@@ -166,7 +168,7 @@ function Header() {
         >
           <Image
             src={colorMode === 'dark' ? manVector : manVectorDark}
-            alt="Vector Header"
+            alt="Coder img"
           ></Image>
         </Box>
         <Box
@@ -181,7 +183,7 @@ function Header() {
         >
           <Image
             src={colorMode === 'dark' ? manVector : manVectorDark}
-            alt="Vector Header"
+            alt="Coder img"
           ></Image>
         </Box>
       </Flex>
