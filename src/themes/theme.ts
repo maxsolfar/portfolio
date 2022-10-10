@@ -1,16 +1,18 @@
 import { mode } from '@chakra-ui/theme-tools';
-import { extendTheme } from '@chakra-ui/react';
+import { extendTheme, useColorMode } from '@chakra-ui/react';
 
 const theme = extendTheme({
   colors: {
     brand: {
       primary: '#21232E',
       primaryDark: '#212121',
+      primary800: '#2B2D3B',
       secondary: '#615AFF',
       accent: '#ffffff',
       clear: '#ffffff',
     },
     mainPurple: {
+      50: '#ECEBFF',
       200: '#615AFF',
       300: '#5147FF',
       500: '#615AFF',

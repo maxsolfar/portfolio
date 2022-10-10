@@ -12,7 +12,7 @@ import {
   Button,
   Collapse,
   useDisclosure,
-  useColorMode
+  useColorMode,
 } from '@chakra-ui/react';
 
 const Navbar = () => {
@@ -26,6 +26,7 @@ const Navbar = () => {
       w={'100%'}
       alignItems={'center'}
       bgColor={colorMode === 'dark' ? 'brand.primary' : 'brand.clear'}
+      zIndex={2}
     >
       <HStack
         as="nav"
@@ -62,7 +63,7 @@ const Navbar = () => {
             colorScheme="mainPurple"
             color={'brand.clear'}
             variant={'solid'}
-            display={['none', 'none', 'flex', 'flex']}
+            display={['none', 'none', 'none', 'flex']}
             px={3}
             rightIcon={<BsChatDotsFill />}
           >
@@ -88,7 +89,6 @@ const Navbar = () => {
           spacing={4}
           w={'100vw'}
           h={'100vh'}
-          zIndex={20}
           bgColor={colorMode === 'dark' ? 'brand.primary' : 'brand.clear'}
           direction="column"
           align="center"
@@ -97,6 +97,7 @@ const Navbar = () => {
           top={'85px'}
           left={0}
           p={10}
+          borderRadius={'100% 0% 100% 0% / 0% 0% 70% 100%'}
         >
           {sections.map((section) => {
             return (
@@ -114,6 +115,23 @@ const Navbar = () => {
           >
             Contact me
           </Button>
+          <Stack
+            pos={'absolute'}
+            bottom={0}
+            right={0}
+            w={'100%'}
+            h={'100%'}
+            bg={'brand.secondary'}
+            zIndex={-1}
+          >
+            {/* <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+              <path
+                fill="#615AFF"
+                fill-opacity="1"
+                d="M0,128L40,144C80,160,160,192,240,213.3C320,235,400,245,480,218.7C560,192,640,128,720,106.7C800,85,880,107,960,128C1040,149,1120,171,1200,176C1280,181,1360,171,1400,165.3L1440,160L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"
+              ></path>
+            </svg> */}
+          </Stack>
         </Stack>
       </Collapse>
     </VStack>
