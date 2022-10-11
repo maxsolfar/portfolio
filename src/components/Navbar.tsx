@@ -49,9 +49,9 @@ const Navbar = () => {
           align="center"
           display={['none', 'none', 'flex', 'flex']}
         >
-          {sections.map((section) => {
+          {sections.map((section, index) => {
             return (
-              <Button variant={'ghost'} aria-label={section} w={'100%'} px={4}>
+              <Button key={index} variant={'ghost'} aria-label={section} w={'100%'} px={4}>
                 {section}
               </Button>
             );
@@ -99,9 +99,9 @@ const Navbar = () => {
           p={10}
           borderRadius={'100% 0% 100% 0% / 0% 0% 70% 100%'}
         >
-          {sections.map((section) => {
+          {sections.map((section, index) => {
             return (
-              <Button variant={'ghost'} aria-label={section} w={'100%'} px={4}>
+              <Button key={index} variant={'ghost'} aria-label={section} w={'100%'} px={4}>
                 {section}
               </Button>
             );

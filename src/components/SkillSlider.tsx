@@ -159,9 +159,9 @@ const SkillSlider = () => {
            }}
         >
           {skillsFrontEnd &&
-            skillsFrontEnd.map((skill) => {
+            skillsFrontEnd.map((skill, index) => {
               return (
-                <SwiperSlide>
+                <SwiperSlide key={index}>
                   <Box
                     display={'flex'}
                     flexDirection={'column'}
@@ -221,9 +221,9 @@ const SkillSlider = () => {
            }}
         >
           {skillsBackEnd &&
-            skillsBackEnd.map((skill) => {
+            skillsBackEnd.map((skill, index) => {
               return (
-                <SwiperSlide>
+                <SwiperSlide key={index}>
                   <Box
                     display={'flex'}
                     flexDirection={'column'}
