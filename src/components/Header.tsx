@@ -64,9 +64,8 @@ function Header() {
     <Stack
       direction={['column-reverse', 'column-reverse', 'row', 'row']}
       pt={24}
-      px={5}
       maxW={'container.xl'}
-      w={'100%'}
+      w={'94%'}
       h={['600px', '600px', '500px', '500px']}
       justify={'center'}
       alignItems={'center'}
@@ -114,10 +113,10 @@ function Header() {
             }}
           />
         </Heading>
-        <Text fontSize={'md'} w={['100%', '100%', '80%', '80%']}>
+       {/*  <Text fontSize={'md'} w={['100%', '100%', '80%', '80%']}>
           MERN & PERN Stack Developer, who Focus on writing clean, elegant and
           efficient code.
-        </Text>
+        </Text> */}
         <Button
           colorScheme="mainPurple"
           size="md"

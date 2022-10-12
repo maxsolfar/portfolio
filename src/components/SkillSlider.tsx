@@ -115,7 +115,7 @@ const SkillSlider = () => {
   return (
     <Container
       as={"section"}
-      w={['100%', '100%', 'container.lg', 'container.lg']}
+      w={['100%', '100%', 'container.xl', 'container.xl']}
       textAlign={'center'}
       display={'flex'}
       flexDirection={['column', 'column', 'row', 'row']}

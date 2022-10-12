@@ -8,8 +8,9 @@ const theme = extendTheme({
       primaryDark: '#212121',
       primary800: '#2B2D3B',
       secondary: '#615AFF',
-      accent: '#ffffff',
+      accent: '#FF4B96',
       clear: '#ffffff',
+      frontColor: "#00976C"
     },
     mainPurple: {
       50: '#ECEBFF',
