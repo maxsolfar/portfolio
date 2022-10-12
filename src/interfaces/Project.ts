@@ -30,6 +30,7 @@ export interface Project {
   deploy: string;
   image: string;
   category: string;
+  creationDate: string;
   color: string;
 }
 
