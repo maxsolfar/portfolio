@@ -10,7 +10,9 @@ const theme = extendTheme({
       secondary: '#615AFF',
       accent: '#FF4B96',
       clear: '#ffffff',
-      frontColor: "#00976C"
+      frontColor: "#00976C",
+      backColor: "#494554",
+      fullColor: "#008CFF"
     },
     mainPurple: {
       50: '#ECEBFF',
@@ -30,4 +32,4 @@ const theme = extendTheme({
 });
 
 
-export default theme
+export default theme;

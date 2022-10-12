@@ -19,6 +19,7 @@ const Projects = ({projects}:ProjectListProps):JSX.Element => {
         category= {project.category}
         color = {project.color}
         repository = {project.repository}
+        creationDate = {project.creationDate}
       />
     ))}
     </SimpleGrid>

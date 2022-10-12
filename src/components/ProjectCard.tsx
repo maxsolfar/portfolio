@@ -15,6 +15,12 @@ import { FaGithub } from 'react-icons/fa';
 import { IoMdRocket } from 'react-icons/io';
 import { Project } from '../interfaces';
 
+const colorsCategory: any = {
+  "Front End" : "brand.frontColor",
+  "Back End" : "brand.backColor",
+  "Full Stack" : "brand.fullColor",
+}
+
 const ProjectCard: React.FC<Project> = ({
   id,
   image,
@@ -27,6 +33,7 @@ const ProjectCard: React.FC<Project> = ({
   category,
   repository,
   deploy,
+  creationDate
 }) => {
   const { colorMode } = useColorMode();
   const animationBounceKeyframes = keyframes`
@@ -51,7 +58,7 @@ const ProjectCard: React.FC<Project> = ({
         pos={'absolute'}
         top={4}
         left={4}
-        bg={'brand.frontColor'}
+        bg={colorsCategory[category]}
         color={'brand.clear'}
         zIndex={1}
         py={1}
@@ -74,7 +81,9 @@ const ProjectCard: React.FC<Project> = ({
         >
           <Heading as="h3" fontSize={'2xl'}>
             {titleEN}
+            <Text fontSize={"xs"} fontWeight={"bold"} color={colorsCategory[category]} pt={1}>{creationDate}</Text>
           </Heading>
+          
           <Flex gap={2}>
             {repository !== "" &&
             <IconButton
@@ -103,7 +112,7 @@ const ProjectCard: React.FC<Project> = ({
             </Button>
           ))}
         </Flex>
-        <Text fontSize={"sm"} noOfLines={2} opacity={0.8}>{descriptionEN}</Text>
+        <Text fontSize={"sm"} noOfLines={2} opacity={0.8} py={1}>{descriptionEN}</Text>
       </Box>
     </Container>
   );
