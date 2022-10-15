@@ -122,7 +122,7 @@ const SkillSlider = () => {
       justifyContent={'center'}
       flexWrap={["wrap","wrap","wrap","nowrap",]}
       pt={4}
-      pb={[20,20,20,28]}
+      pb={[20,20,28,40]}
       gap={[4,10,12,16]}
     >
       <Container>

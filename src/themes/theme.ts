@@ -2,6 +2,7 @@ import { mode } from '@chakra-ui/theme-tools';
 import { extendTheme } from '@chakra-ui/react';
 
 const theme = extendTheme({
+  initialColorMode: "system",
   colors: {
     brand: {
       primary: '#21232E',
@@ -10,9 +11,9 @@ const theme = extendTheme({
       secondary: '#615AFF',
       accent: '#FF4B96',
       clear: '#ffffff',
-      frontColor: "#00976C",
-      backColor: "#494554",
-      fullColor: "#008CFF"
+      frontColor: '#00976C',
+      backColor: '#494554',
+      fullColor: '#008CFF',
     },
     mainPurple: {
       50: '#ECEBFF',
@@ -30,6 +31,5 @@ const theme = extendTheme({
     }),
   },
 });
-
 
 export default theme;

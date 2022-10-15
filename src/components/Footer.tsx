@@ -6,21 +6,24 @@ import {
   Text,
   useColorMode,
 } from '@chakra-ui/react';
-import { FaGithub, FaLinkedin, FaTwitter, FaYoutube } from 'react-icons/fa';
+import { FaReact } from 'react-icons/fa';
+import { SiTypescript } from 'react-icons/si';
 
 const Footer = () => {
   const { colorMode } = useColorMode();
   return (
     <Container
       as="footer"
+      id="footer"
+      title="footer"
       role="contentinfo"
       py={2}
       borderTop="1px"
       borderColor="rgba(150,150,150,.1)"
       w="100%"
-      maxW="container.lg"
+      maxW="container.xl"
       zIndex={-1}
-      mt={"auto !important"}
+      mt={'auto !important'}
     >
       <Stack spacing={{ base: '2', md: '3' }}>
         <Stack justify="center" direction="row" align="center">
@@ -28,26 +31,15 @@ const Footer = () => {
             <IconButton
               as="a"
               href="#"
-              aria-label="Youtube"
-              icon={<FaYoutube fontSize="1.25rem" />}
+              aria-label="React.js"
+              variant={'outline'}
+              icon={<FaReact fontSize="1.5rem" />}
             />
             <IconButton
               as="a"
-              href="#"
-              aria-label="Twitter"
-              icon={<FaTwitter fontSize="1.25rem" />}
-            />
-            <IconButton
-              as="a"
-              href="#"
-              aria-label="LinkedIn"
-              icon={<FaLinkedin fontSize="1.25rem" />}
-            />
-            <IconButton
-              as="a"
-              href="#"
-              aria-label="GitHub"
-              icon={<FaGithub fontSize="1.25rem" />}
+              aria-label="TypeScript"
+              variant={'outline'}
+              icon={<SiTypescript fontSize="1.5rem" />}
             />
           </ButtonGroup>
         </Stack>

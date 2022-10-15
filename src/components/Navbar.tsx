@@ -14,27 +14,44 @@ import {
   useDisclosure,
   useColorMode,
 } from '@chakra-ui/react';
+import { Link } from 'react-scroll';
 
 const Navbar = () => {
-  const sections = ['About me', 'Projects', 'Experience', 'Education'];
+  const sections = [
+    {
+      name: 'About me',
+      link: 'about-me',
+    },
+    {
+      name: 'Projects',
+      link: 'projects',
+    },
+    {
+      name: 'Education',
+      link: 'education',
+    },
+  ];
   const { isOpen, onToggle } = useDisclosure();
   const { colorMode } = useColorMode();
   return (
     <VStack
       as="section"
       pos={'fixed'}
+      top={0}
       w={'100%'}
       alignItems={'center'}
       bgColor={colorMode === 'dark' ? 'brand.primary' : 'brand.clear'}
       zIndex={2}
+      pt={5}
+      px={[5, 5, 8, 0]}
     >
       <HStack
         as="nav"
         maxW={'container.xl'}
         w="100%"
-        p={5}
         justifyContent={'space-between'}
         alignItems={'center'}
+        pb={4}
         borderBottom="1px"
         borderColor="rgba(150,150,150,.1)"
       >
@@ -51,24 +68,46 @@ const Navbar = () => {
         >
           {sections.map((section, index) => {
             return (
-              <Button key={index} variant={'ghost'} aria-label={section} w={'100%'} px={4}>
-                {section}
-              </Button>
+              <Link
+                key={index}
+                to={section.link}
+                smooth={true}
+                spy={true}
+                offset={-70}
+                duration={1200}
+              >
+                <Button
+                  variant={'ghost'}
+                  aria-label={section.name}
+                  w={'100%'}
+                  px={4}
+                >
+                  {section.name}
+                </Button>
+              </Link>
             );
           })}
         </Stack>
 
         <Stack spacing={4} direction="row" align="center">
-          <Button
-            colorScheme="mainPurple"
-            color={'brand.clear'}
-            variant={'solid'}
-            display={['none', 'none', 'none', 'flex']}
-            px={3}
-            rightIcon={<BsChatDotsFill />}
+          <Link
+            to={'footer'}
+            smooth={true}
+            spy={true}
+            offset={-70}
+            duration={1200}
           >
-            Contact me
-          </Button>
+            <Button
+              colorScheme="mainPurple"
+              color={'brand.clear'}
+              variant={'solid'}
+              display={['none', 'none', 'none', 'flex']}
+              px={3}
+              rightIcon={<BsChatDotsFill />}
+            >
+              Contact me
+            </Button>
+          </Link>
 
           <IconButton
             aria-label="Open Menu"
@@ -101,20 +140,42 @@ const Navbar = () => {
         >
           {sections.map((section, index) => {
             return (
-              <Button key={index} variant={'ghost'} aria-label={section} w={'100%'} px={4}>
-                {section}
-              </Button>
+              <Link
+                key={index}
+                to={section.link}
+                smooth={true}
+                spy={true}
+                offset={-70}
+                duration={1200}
+              >
+                <Button
+                  variant={'ghost'}
+                  aria-label={section.name}
+                  w={'100%'}
+                  px={4}
+                >
+                  {section.name}
+                </Button>
+              </Link>
             );
           })}
-          <Button
-            colorScheme="mainPurple"
-            color={'brand.clear'}
-            variant={'solid'}
-            px={3}
-            rightIcon={<BsChatDotsFill />}
+          <Link
+            to={'footer'}
+            smooth={true}
+            spy={true}
+            offset={-70}
+            duration={1200}
           >
-            Contact me
-          </Button>
+            <Button
+              colorScheme="mainPurple"
+              color={'brand.clear'}
+              variant={'solid'}
+              px={3}
+              rightIcon={<BsChatDotsFill />}
+            >
+              Contact me
+            </Button>
+          </Link>
           <Stack
             pos={'absolute'}
             bottom={0}

@@ -1,6 +1,5 @@
 import {
   Stack,
-  Text,
   Flex,
   Heading,
   Box,
@@ -65,12 +64,14 @@ function Header() {
       direction={['column-reverse', 'column-reverse', 'row', 'row']}
       pt={24}
       maxW={'container.xl'}
-      w={'94%'}
+      w={'90%'}
       h={['600px', '600px', '500px', '500px']}
       justify={'center'}
       alignItems={'center'}
       pos={'relative'}
       gap={[8,8,4,4]}
+      title={"about-me"}
+      id="about-me"
     >
       <Flex
         direction={'column'}
@@ -121,7 +122,7 @@ function Header() {
           colorScheme="mainPurple"
           size="md"
           variant={"outline"}
-          w={['100%', '100%', '35%', '35%']}
+          w={['100%', '100%', '48%', '35%']}
           onClick={onButtonClick}
           leftIcon={<FiDownload/>}
         >
