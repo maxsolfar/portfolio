@@ -311,6 +311,48 @@ const projects = [
     active: true,
     color: '#D4D4FF',
   },
+  {
+    id: '009',
+    titleES: 'Portafolio',
+    titleEN: 'Portfolio',
+    descriptionEN:
+      'Web portfolio developed with React.js, Typescript & Chakra UI',
+    descriptionES:
+      'Portafolio web desarrollado con React.js, Typescript & Chakra UI',
+    funcionalitiesEN: [
+      'Sensitive data hashing with Bcryptjs and validations with Express Validator',
+      'Generating tokens to handle authentication with JsonWebTokens.',
+      'Storing tokens and authorization data in Cookies and LocalStorage.',
+      'API documentation with Swagger UI.',
+    ],
+    funcionalitiesES: [
+      'Hasheo de datos sensibles con Bcryptjs y validaciones con Express Validator.',
+      'Generación de tokens para manejar la autenticación con JsonWebTokens.',
+      'Almacenamiento de tokens y datos de autorización en Cookies y LocalStorage.',
+      'Documentación de la API con Swagger UI.',
+    ],
+    tools: [
+      'React.js',
+      'Redux Toolkit',
+      'TypeScript',
+      'Chakra UI',
+      'Formik',
+      'Yup',
+      'Framer Motion'
+    ],
+    deploy: 'https://maxsolfar.dev',
+    repository: 'https://github.com/maxsolfar/portfolio',
+    image: 'https://i.imgur.com/Y0hVzgW.png',
+    gallery: [
+      'https://i.imgur.com/2fLYFdv.png',
+      'https://www.arenismedico.com/assets/images/staff.jpg',
+      'https://www.arenismedico.com/assets/images/staff.jpg',
+    ],
+    category: 'Front End',
+    creationDate: '04-10-2022',
+    active: true,
+    color: '#D4D4FF',
+  },
 ];
 
 export default projects;
