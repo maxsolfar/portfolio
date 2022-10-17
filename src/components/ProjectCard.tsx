@@ -34,6 +34,7 @@ const ProjectCard: React.FC<Project> = ({
   repository,
   deploy,
   creationDate
+
 }) => {
   const { colorMode } = useColorMode();
   const animationBounceKeyframes = keyframes`

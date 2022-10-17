@@ -121,8 +121,7 @@ const SkillSlider = () => {
       flexDirection={['column', 'column', 'row', 'row']}
       justifyContent={'center'}
       flexWrap={["wrap","wrap","wrap","nowrap",]}
-      pt={4}
-      pb={[20,20,28,40]}
+      pb={32}
       gap={[4,10,12,16]}
     >
       <Container>
