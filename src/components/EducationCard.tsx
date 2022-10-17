@@ -74,6 +74,7 @@ const EducationCard: React.FC<Education> = ({
               fontSize={'xs'}
               bg={'brand.secondary'}
               alignSelf={["center","center", "flex-start", "flex-start"]}
+              color={"brand.clear"}
             >
               {location}
             </Text>
