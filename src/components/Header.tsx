@@ -19,6 +19,9 @@ import codeAssetsA from '../assets/assets-header.png';
 import manVector from '../assets/man-vector.png';
 import manVectorDark from '../assets/man-vector-dark.png';
 import { FiDownload } from 'react-icons/fi';
+import { Canvas } from '@react-three/fiber';
+import { Suspense } from 'react';
+import { Room } from './Room/Room';
 
 function Header() {
 
