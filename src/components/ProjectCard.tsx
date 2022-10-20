@@ -48,6 +48,7 @@ const ProjectCard: React.FC<Project> = ({
       p={2}
       pos={'relative'}
       _hover={{ transform: 'scale(1.02)' }}
+      transition=".5s linear"
       cursor="pointer"
     >
       {/* <Box
