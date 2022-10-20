@@ -7,6 +7,7 @@ import {
   Image,
   useColorMode,
   Button,
+  Text,
 } from '@chakra-ui/react';
 import Typewriter from 'typewriter-effect';
 import { motion } from 'framer-motion';
@@ -19,27 +20,23 @@ import codeAssetsA from '../assets/assets-header.png';
 import manVector from '../assets/man-vector.png';
 import manVectorDark from '../assets/man-vector-dark.png';
 import { FiDownload } from 'react-icons/fi';
-import { Canvas } from '@react-three/fiber';
-import { Suspense } from 'react';
-import { Room } from './Room/Room';
 
 function Header() {
-
-   // Function will execute on click of button
-   const onButtonClick = () => {
+  // Function will execute on click of button
+  const onButtonClick = () => {
     // using Java Script method to get PDF file
-    fetch('cv-maxsolfar.pdf').then(response => {
-        response.blob().then(blob => {
-            // Creating new object of PDF file
-            const fileURL = window.URL.createObjectURL(blob);
-            // Setting various property values
-            let alink = document.createElement('a');
-            alink.href = fileURL;
-            alink.download = 'cv-maximo-solis.pdf';
-            alink.click();
-        })
-    })
-}
+    fetch('cv-maxsolfar.pdf').then((response) => {
+      response.blob().then((blob) => {
+        // Creating new object of PDF file
+        const fileURL = window.URL.createObjectURL(blob);
+        // Setting various property values
+        let alink = document.createElement('a');
+        alink.href = fileURL;
+        alink.download = 'cv-maximo-solis.pdf';
+        alink.click();
+      });
+    });
+  };
 
   const { colorMode } = useColorMode();
 
@@ -68,43 +65,60 @@ function Header() {
       pt={24}
       maxW={'container.xl'}
       w={'90%'}
-      h={['600px', '600px', '500px', '500px']}
+      h={['70vh', '70vh', '60vh', '60vh']}
       justify={'center'}
       alignItems={'center'}
-      pos={'relative'}
-      gap={[8,8,4,4]}
-      title={"about-me"}
+      gap={[8, 8, 8, 8]}
+      title={'about-me'}
       id="about-me"
+      pos={'relative'}
     >
       <Flex
         direction={'column'}
         gap={4}
-        basis={['55%', '55%', '65%', '55%']}
+        basis={'100%'}
         justify={'center'}
+        alignItems={'center'}
       >
-        <Box pos={'relative'}>
-          <Heading size={'lg'}>Hi, I am</Heading>
+        <Box textAlign={'center'}>
+          <Heading size={'lg'} color={colorMode === 'dark' ? "brand.clear": "brand.primary800"}>Hi, I am</Heading>
           <Heading
-            size={['3xl', '2xl', '2xl', '3xl']}
+            size={['3xl', '3xl', '2xl', '4xl']}
+            letterSpacing={'-0.2rem'}
             color={'brand.secondary'}
             pt={2}
           >
-            Máximo Solis
+            Máximo Solis Farfan
           </Heading>
-          <Box
+          {/* <Box
             as={motion.div}
             pos={'absolute'}
-            top={["-7%","-7%","-30%","-30%"]}
-            left={["30%","30%","35%","25%"]}
+            bottom={['0%', '0%', '15%', '15%']}
+            left={['0%', '0%', '6%', '6%']}
             animation={upAnimationAssets}
-            zIndex={-1}
-            w={['60px', '60px', '100px', '100px']}
+            zIndex={0}
+            w={['60px', '60px', '90px', '90px']}
           >
             <Image src={codeAssetsA} alt="Vector Header"></Image>
+          </Box> */}
+          <Box
+            as={motion.div}
+            animation={upAnimation}
+            zIndex={-1}
+            pos={'absolute'}
+            bottom={0}
+            right={0}
+            w={'18%'}
+            display={['none', 'none', 'flex', 'flex']}
+          >
+            <Image
+              src={colorMode === 'dark' ? manVector : manVectorDark}
+              alt="Coder img"
+            ></Image>
           </Box>
         </Box>
 
-        <Heading size={'xl'}>
+        <Heading size={'xl'} color={colorMode === 'dark' ? "brand.clear": "brand.primary800"}>
           <Typewriter
             options={{
               strings: [
@@ -117,22 +131,26 @@ function Header() {
             }}
           />
         </Heading>
-       {/*  <Text fontSize={'md'} w={['100%', '100%', '80%', '80%']}>
+        <Text
+          fontSize={'lg'}
+          textAlign={'center'}
+          w={['100%', '100%', '80%', '80%']}
+        >
           MERN & PERN Stack Developer, who Focus on writing clean, elegant and
           efficient code.
-        </Text> */}
+        </Text>
         <Button
           colorScheme="mainPurple"
           size="md"
-          variant={"outline"}
-          w={['100%', '100%', '48%', '35%']}
+          variant={'outline'}
+          w={['100%', '100%', '48%', '20%']}
           onClick={onButtonClick}
-          leftIcon={<FiDownload/>}
+          leftIcon={<FiDownload />}
         >
           Download CV
         </Button>
       </Flex>
-      <Flex basis={'55%'} alignItems={'center'} justify={'center'}>
+      {/* <Flex basis={'55%'} alignItems={'center'} justify={'center'}>
         <Box
           as={motion.div}
           animation={bounceAnimation}
@@ -189,7 +207,7 @@ function Header() {
             alt="Coder img"
           ></Image>
         </Box>
-      </Flex>
+      </Flex> */}
     </Stack>
   );
 }

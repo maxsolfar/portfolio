@@ -6,8 +6,12 @@ import {
   Text,
   useColorMode,
 } from '@chakra-ui/react';
-import { FaReact } from 'react-icons/fa';
-import { SiTypescript } from 'react-icons/si';
+import {
+  SiTypescript,
+  SiRedux,
+  SiReactrouter,
+  SiReact
+} from 'react-icons/si';
 
 const Footer = () => {
   const { colorMode } = useColorMode();
@@ -33,13 +37,25 @@ const Footer = () => {
               href="#"
               aria-label="React.js"
               variant={'outline'}
-              icon={<FaReact fontSize="1.5rem" />}
+              icon={<SiReact fontSize="1.5rem" />}
+            />
+            <IconButton
+              as="a"
+              aria-label="Redux"
+              variant={'outline'}
+              icon={<SiRedux fontSize="1.5rem" />}
             />
             <IconButton
               as="a"
               aria-label="TypeScript"
               variant={'outline'}
               icon={<SiTypescript fontSize="1.5rem" />}
+            />
+            <IconButton
+              as="a"
+              aria-label="React router"
+              variant={'outline'}
+              icon={<SiReactrouter fontSize="1.5rem" />}
             />
           </ButtonGroup>
         </Stack>

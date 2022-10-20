@@ -120,6 +120,7 @@ const SkillSlider = () => {
       display={'flex'}
       flexDirection={['column', 'column', 'row', 'row']}
       justifyContent={'center'}
+      alignItems={"center"}
       flexWrap={["wrap","wrap","wrap","nowrap",]}
       pb={32}
       gap={[4,10,12,16]}
@@ -169,12 +170,11 @@ const SkillSlider = () => {
                     justifyContent={'center'}
                     gap={2}
                     borderRadius={'10px'}
-                    bg={colorMode === 'dark' ? 'brand.primary800' : '#F9F9F9'}
+                    bg={colorMode === 'dark' ? 'brand.primary800' : '#eeeefc'}
                     boxShadow="md"
                   >
                     <Image src={skill.img} alt="skill-img" w={'65px'} />
                     <Text
-                      fontFamily={'Poppins'}
                       fontSize={['xs', 'xs', 'sm', 'sm']}
                       fontWeight={'semibold'}
                     >
@@ -187,7 +187,7 @@ const SkillSlider = () => {
         </Swiper>
       </Container>
       <Container>
-        <Heading size="md" mb={4} opacity={".7"}>
+        <Heading size="md" mb={4} opacity={".5"}>
           Back End
         </Heading>
         <Swiper
@@ -231,12 +231,11 @@ const SkillSlider = () => {
                     justifyContent={'center'}
                     gap={2}
                     borderRadius={'10px'}
-                    bg={colorMode === 'dark' ? 'brand.primary800' : '#F9F9F9'}
+                    bg={colorMode === 'dark' ? 'brand.primary800' : '#eeeefc'}
                     boxShadow="md"
                   >
                     <Image src={skill.img} alt="skill-img" w={'65px'} />
                     <Text
-                      fontFamily={'Poppins'}
                       fontSize={['xs', 'xs', 'sm', 'sm']}
                       fontWeight={'semibold'}
                     >
