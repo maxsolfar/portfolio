@@ -23,12 +23,12 @@ const Navbar = () => {
       link: 'about-me',
     },
     {
-      name: 'Projects',
-      link: 'projects',
+      name: 'My Skills',
+      link: 'my-skills',
     },
     {
-      name: 'Education',
-      link: 'education',
+      name: 'Projects',
+      link: 'projects',
     },
   ];
   const { isOpen, onToggle } = useDisclosure();
@@ -40,7 +40,7 @@ const Navbar = () => {
       top={0}
       w={'100%'}
       alignItems={'center'}
-      bgColor={colorMode === 'dark' ? 'brand.primary' : 'brand.clear'}
+
       zIndex={2}
       pt={5}
       px={[5, 5, 8, 0]}
@@ -52,8 +52,13 @@ const Navbar = () => {
         justifyContent={'space-between'}
         alignItems={'center'}
         pb={4}
-        borderBottom="1px"
-        borderColor="rgba(150,150,150,.1)"
+/*         borderBottom="1px"
+        borderColor="rgba(150,150,150,.1)" */
+        bg={["transparent", "transparent", colorMode === "dark" ? "brand.primary800" : "#f3f3ff", colorMode === "dark" ? "brand.primary800" : "#f3f3ff"]}
+        py={[0,0,3,3]}
+        px={[0,0,8,8]}
+        borderRadius={[0,0,10,10]}
+        shadow={["none", "none", "md", "md"]}
       >
         <Image
           src={colorMode === 'dark' ? logo : logoDark}
@@ -81,6 +86,7 @@ const Navbar = () => {
                   aria-label={section.name}
                   w={'100%'}
                   px={4}
+                  color={colorMode === 'dark' ? "brand.clear": "brand.primary800"}
                 >
                   {section.name}
                 </Button>
@@ -97,16 +103,15 @@ const Navbar = () => {
             offset={-70}
             duration={1200}
           >
-            <Button
+            <IconButton
+              aria-label="contact-me"
               colorScheme="mainPurple"
               color={'brand.clear'}
               variant={'solid'}
               display={['none', 'none', 'none', 'flex']}
               px={3}
-              rightIcon={<BsChatDotsFill />}
-            >
-              Contact me
-            </Button>
+              icon={<BsChatDotsFill />}
+            />
           </Link>
 
           <IconButton
@@ -133,7 +138,7 @@ const Navbar = () => {
           align="center"
           display={['flex', 'flex', 'none', 'none']}
           pos={'absolute'}
-          top={'85px'}
+          top={'75px'}
           left={0}
           p={10}
           borderRadius={'100% 0% 100% 0% / 0% 0% 70% 100%'}
@@ -153,6 +158,7 @@ const Navbar = () => {
                   aria-label={section.name}
                   w={'100%'}
                   px={4}
+                  color={colorMode === 'dark' ? "brand.clear": "brand.primary800"}
                 >
                   {section.name}
                 </Button>

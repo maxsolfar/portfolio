@@ -15,12 +15,6 @@ import { FaGithub } from 'react-icons/fa';
 import { IoMdRocket } from 'react-icons/io';
 import { Project } from '../interfaces';
 
-const colorsCategory: any = {
-  "Front End" : "brand.frontColor",
-  "Back End" : "brand.backColor",
-  "Full Stack" : "brand.fullColor",
-}
-
 const ProjectCard: React.FC<Project> = ({
   id,
   image,
@@ -50,11 +44,13 @@ const ProjectCard: React.FC<Project> = ({
       borderRadius={'20px'}
       overflow="hidden"
       boxShadow="md"
-      bg={colorMode === 'dark' ? 'brand.primary800' : '#f9f9f9'}
+      bg={colorMode === 'dark' ? 'brand.primary800' : '#f3f3ff'}
       p={2}
       pos={'relative'}
+      _hover={{ transform: 'scale(1.02)' }}
+      cursor="pointer"
     >
-      <Box
+      {/* <Box
         fontSize={'xs'}
         pos={'absolute'}
         top={4}
@@ -67,7 +63,7 @@ const ProjectCard: React.FC<Project> = ({
         borderRadius={4}
       >
         {category}
-      </Box>
+      </Box> */}
       <Box as={motion.div} animation={bounceAnimation}>
         <Image src={image} alt={titleEN} w={'100%'} />
       </Box>
@@ -76,13 +72,13 @@ const ProjectCard: React.FC<Project> = ({
           display={'flex'}
           justifyContent={'space-between'}
           alignItems={'center'}
-          pb={4}
-          borderBottom="1px"
-          borderColor="rgba(150,150,150,.1)"
+          pb={2}
+/*           borderBottom="1px"
+          borderColor="rgba(150,150,150,.1)" */
         >
           <Heading as="h3" fontSize={'2xl'}>
             {titleEN}
-            <Text fontSize={"xs"} fontWeight={"bold"} color={colorsCategory[category]} pt={1}>{creationDate}</Text>
+            {/* <Text fontSize={"xs"} fontWeight={"bold"} color={colorsCategory[category]} pt={1}>{creationDate}</Text> */}
           </Heading>
           
           <Flex gap={2}>
@@ -106,14 +102,14 @@ const ProjectCard: React.FC<Project> = ({
             />}
           </Flex>
         </Box>
-        <Flex gap={2} wrap={'wrap'} py={4}>
+        <Flex gap={2} wrap={'wrap'} py={2}>
           {tools?.map((tool, index) => (
-            <Button key={index} bg={index%2 === 0 ? "brand.secondary" : "brand.accent"} color="brand.clear" fontWeight={"medium"} size={'xs'}>
+            <Button key={index} /* bg={index%2 === 0 ? "brand.secondary" : "brand.accent"} */ variant={"outline"} colorScheme={"mainPurple"} fontWeight={"medium"} size={'xs'}>
               {tool}
             </Button>
           ))}
         </Flex>
-        <Text fontSize={"sm"} noOfLines={2} opacity={0.8} py={1}>{descriptionEN}</Text>
+        <Text fontSize={"sm"} noOfLines={2} opacity={0.8} py={1} >{descriptionEN}</Text>
       </Box>
     </Container>
   );

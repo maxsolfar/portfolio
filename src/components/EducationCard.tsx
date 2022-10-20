@@ -2,22 +2,21 @@ import {
   Box,
   Heading,
   Text,
-  Image,
-  Container,
-  useColorMode,
-  keyframes,
   Button,
   Flex,
-  IconButton,
   Stack,
-  SimpleGrid,
   VStack,
+  HStack,
+  Image,
 } from '@chakra-ui/react';
 import { Education } from '../interfaces';
-import { motion } from 'framer-motion';
 import { FaFileArchive } from 'react-icons/fa';
+import platzi from '../assets/platzi.png';
+import henry from '../assets/henry.png';
+import isam from '../assets/isam.png';
 
 const EducationCard: React.FC<Education> = ({
+  id,
   title,
   location,
   description,
@@ -25,47 +24,46 @@ const EducationCard: React.FC<Education> = ({
   image,
   certificate,
 }) => {
-  const { colorMode } = useColorMode();
-  const animationBounceKeyframes = keyframes`
-    0% { transform: scale(.85);}
-    50% { transform: scale(.90);}
-    100% { transform: scale(.85); }
-  `;
-  const bounceAnimation = `${animationBounceKeyframes} 4s ease-in-out infinite`;
-
   return (
     <Stack
-      as = {"section"}
-      direction={["column", "column", "row", "row"]}
-      alignItems={"center"}
-      justifyContent={"center"}
+      as={'section'}
+      direction={['column', 'column', 'row', 'row']}
+      alignItems={'center'}
+      justifyContent={'center'}
       w={'100%'}
       borderRadius={'20px'}
-      boxShadow="md"
-      bg={colorMode === 'dark' ? 'brand.primary800' : '#f9f9f9'}
-      py={4}
-      px={8}
+      border="1px"
+      borderColor="rgba(150,150,150,.1)"
+      /* boxShadow="md" */
+      /*       bg={colorMode === 'dark' ? 'brand.primary800' : '#f9f9f9'} */
+      p={4}
       gap={4}
     >
-      <Box as={motion.div} animation={bounceAnimation} flexBasis={'25%'}>
+      {/* <Box as={motion.div} animation={bounceAnimation} flexBasis={'25%'}>
         <Image src={image} alt={title} w={'100%'} />
-      </Box>
-      <Flex direction={'column'} gap={2} flexBasis={'75%'} alignItems={["center", "center", "flex-start", "flex-start"]}>
+      </Box> */}
+      <Flex
+        direction={'column'}
+        gap={2}
+        flexBasis={'100%'}
+        alignItems={'center'}
+      >
         <Box
           display={'flex'}
           justifyContent={'space-between'}
-          alignItems={'space-between'}
-          flexDirection={["column", "column", "row", "row"]}
-          w={"100%"}
-          gap={2}
+          alignItems={'center'}
+          flexDirection={'column'}
+          w={'100%'}
+          gap={4}
           pb={4}
-          borderBottom="1px"
-          borderColor="rgba(150,150,150,.1)"
+          /*          borderBottom="1px"
+          borderColor="rgba(150,150,150,.1)" */
         >
-          <VStack alignItems={"space-between"} >
-            <Heading as="h4" fontSize={'lg'} textAlign={["center", "center", "left", "left"]}>
-              {title}
-            </Heading>
+          <Image src={id === "1" ? isam : id === "2" ? henry : platzi} w={'50px'} borderRadius={'50%'} />
+          <Heading as="h4" fontSize={'lg'} textAlign={'center'}>
+            {title}
+          </Heading>
+          <HStack>
             <Text
               as={'span'}
               borderRadius={6}
@@ -73,25 +71,33 @@ const EducationCard: React.FC<Education> = ({
               px={4}
               fontSize={'xs'}
               bg={'brand.secondary'}
-              alignSelf={["center","center", "flex-start", "flex-start"]}
-              color={"brand.clear"}
+              border={'1px'}
+              borderColor={'brand.secondary'}
+              alignSelf={'center'}
+              color={'brand.clear'}
             >
               {location}
             </Text>
-          </VStack>
-          <Text
-            fontSize={'xs'}
-            fontWeight={'semibold'}
-            border={'1px'}
-            py={2}
-            px={3}
-            borderRadius={6}
-            alignSelf={"center"}
-          >
-            {date}
-          </Text>
+            <Text
+              fontSize={'xs'}
+              fontWeight={'normal'}
+              border={'1px'}
+              py={1}
+              px={4}
+              borderRadius={6}
+              alignSelf={'center'}
+            >
+              {date}
+            </Text>
+          </HStack>
         </Box>
-        <Text fontSize={'sm'} noOfLines={2} opacity={0.8} py={1}>
+        <Text
+          fontSize={'sm'}
+          noOfLines={2}
+          opacity={0.8}
+          py={1}
+          textAlign={'center'}
+        >
           {description}
         </Text>
         <Flex gap={2}>
@@ -106,7 +112,18 @@ const EducationCard: React.FC<Education> = ({
             >
               Certificate
             </Button>
-          ): <Text color={"brand.secondary"} fontWeight={"bold"}>In process</Text>}
+          ) : (
+            <Button
+              as="a"
+              target="_blank"
+              href={certificate}
+              aria-label="Certificate"
+              variant={'outline'}
+              leftIcon={<FaFileArchive />}
+            >
+              In Process
+            </Button>
+          )}
         </Flex>
       </Flex>
     </Stack>

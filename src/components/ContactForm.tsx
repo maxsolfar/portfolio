@@ -26,7 +26,7 @@ const ContactForm = () => {
       direction={["column", "column", "row", "row"]}
     >
       <VStack
-        bg={colorMode === 'dark' ? 'brand.primary800' : '#f9f9f9'}
+        bg={colorMode === 'dark' ? 'brand.primary800' : '#f3f3ff'}
         borderRadius={10}
         boxShadow="md"
         alignItems={'flex-start'}
