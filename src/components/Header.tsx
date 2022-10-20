@@ -81,7 +81,12 @@ function Header() {
         alignItems={'center'}
       >
         <Box textAlign={'center'}>
-          <Heading size={'lg'} color={colorMode === 'dark' ? "brand.clear": "brand.primary800"}>Hi, I am</Heading>
+          <Heading
+            size={'lg'}
+            color={colorMode === 'dark' ? 'brand.clear' : 'brand.primary800'}
+          >
+            Hi, I am
+          </Heading>
           <Heading
             size={['3xl', '3xl', '2xl', '4xl']}
             letterSpacing={'-0.2rem'}
@@ -118,7 +123,10 @@ function Header() {
           </Box>
         </Box>
 
-        <Heading size={'xl'} color={colorMode === 'dark' ? "brand.clear": "brand.primary800"}>
+        <Heading
+          size={'xl'}
+          color={colorMode === 'dark' ? 'brand.clear' : 'brand.primary800'}
+        >
           <Typewriter
             options={{
               strings: [

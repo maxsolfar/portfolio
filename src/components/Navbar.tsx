@@ -40,9 +40,10 @@ const Navbar = () => {
       top={0}
       w={'100%'}
       alignItems={'center'}
-
+      bg={colorMode === "dark" ? ["brand.primary","brand.primary","transparent","transparent"] : ["brand.clear","brand.clear","transparent","transparent"]}
       zIndex={2}
-      pt={5}
+      /* pt={[0,0,5,5]} */
+      py={[2,2,5,5]}
       px={[5, 5, 8, 0]}
     >
       <HStack
@@ -138,7 +139,7 @@ const Navbar = () => {
           align="center"
           display={['flex', 'flex', 'none', 'none']}
           pos={'absolute'}
-          top={'75px'}
+          top={'70px'}
           left={0}
           p={10}
           borderRadius={'100% 0% 100% 0% / 0% 0% 70% 100%'}
