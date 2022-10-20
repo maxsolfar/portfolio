@@ -1,8 +1,14 @@
 import { mode } from '@chakra-ui/theme-tools';
-import { extendTheme } from '@chakra-ui/react';
+// 1. import `extendTheme` function
+import { extendTheme, type ThemeConfig } from '@chakra-ui/react'
+
+const config: ThemeConfig = {
+  initialColorMode: 'dark',
+  useSystemColorMode: false,
+}
 
 const theme = extendTheme({
-  initialColorMode: "system",
+  config,
   colors: {
     brand: {
       primary: '#1A1B23',

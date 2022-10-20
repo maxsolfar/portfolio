@@ -15,7 +15,6 @@ import 'swiper/css';
 import './utils/swiper.css';
 // Icons
 import javascript from '../assets/skills/javascript.svg';
-import typescript from '../assets/skills/typescript.svg';
 import react from '../assets/skills/react.svg';
 import redux from '../assets/skills/redux.svg';
 import css from '../assets/skills/css.svg';
@@ -49,10 +48,6 @@ const SkillSlider = () => {
       img: redux,
     },
     {
-      name: 'TypeScript',
-      img: typescript,
-    },
-    {
       name: 'CSS',
       img: css,
     },
@@ -77,10 +72,6 @@ const SkillSlider = () => {
     {
       name: 'Git',
       img: git,
-    },
-    {
-      name: 'TypeScript',
-      img: typescript,
     },
     {
       name: 'Node.js',
@@ -122,7 +113,7 @@ const SkillSlider = () => {
       justifyContent={'center'}
       alignItems={"center"}
       flexWrap={["wrap","wrap","wrap","nowrap",]}
-      pb={32}
+      /* pb={32} */
       gap={[4,10,12,16]}
     >
       <Container>
