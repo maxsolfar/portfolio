@@ -160,6 +160,7 @@ const Navbar = () => {
                   w={'100%'}
                   px={4}
                   color={colorMode === 'dark' ? "brand.clear": "brand.primary800"}
+                  onClick={onToggle}
                 >
                   {section.name}
                 </Button>
@@ -179,6 +180,7 @@ const Navbar = () => {
               variant={'solid'}
               px={3}
               rightIcon={<BsChatDotsFill />}
+              onClick={onToggle}
             >
               Contact me
             </Button>
