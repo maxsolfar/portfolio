@@ -294,12 +294,12 @@ const projects = [
   },
   {
     id: '009',
-    titleES: 'Portafolio',
-    titleEN: 'Portfolio',
+    titleES: 'JTracking',
+    titleEN: 'JTracking',
     descriptionEN:
-      'Web portfolio developed with React.js, Typescript & Chakra UI',
+      'Application to Job Tracking System with React.js & Node.js',
     descriptionES:
-      'Portafolio web desarrollado con React.js, Typescript & Chakra UI',
+      'Sistema de trackeo de aplicaciones a trabajos con React & Node.js',
     funcionalitiesEN: [
       'Sensitive data hashing with Bcryptjs and validations with Express Validator',
       'Generating tokens to handle authentication with JsonWebTokens.',
@@ -314,20 +314,21 @@ const projects = [
     ],
     tools: [
       'React.js',
-      'TypeScript',
       'Chakra UI',
-      'Framer Motion'
+      'Context API',
+      'Node.js',
+      'Express'
     ],
-    deploy: 'https://maxsolfar.dev',
-    repository: 'https://github.com/maxsolfar/portfolio',
-    image: 'https://i.imgur.com/Y0hVzgW.png',
+    deploy: 'https://jtracking.vercel.app/',
+    repository: 'https://github.com/maxsolfar/jtracking',
+    image: 'https://i.imgur.com/TNZEHaD.png',
     gallery: [
       'https://i.imgur.com/2fLYFdv.png',
       'https://www.arenismedico.com/assets/images/staff.jpg',
       'https://www.arenismedico.com/assets/images/staff.jpg',
     ],
-    category: 'Front End',
-    creationDate: '04-10-2022',
+    category: 'Full Stack',
+    creationDate: '01-12-2022',
     active: true,
     color: '#D4D4FF',
   },
