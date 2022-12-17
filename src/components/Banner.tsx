@@ -28,9 +28,13 @@ const Banner = () => {
       name: 'TypeScript',
       img: typescript,
     },
-    {
+/*     {
       name: 'Python',
       img: python,
+    }, */
+    {
+      name: 'React Native',
+      img: react,
     },
     /* {
       name: 'Next Js',
@@ -40,7 +44,7 @@ const Banner = () => {
     {
       name: 'React Native',
       img: react,
-    }, */
+    },
   ];
   return (
     <Container maxW="container.lg" p={{ base: 5, md: 10 }}>

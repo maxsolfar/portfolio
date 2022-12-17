@@ -2,11 +2,11 @@ const education = [
   {
     id: '1',
     location: 'ISAM Institute',
-    title: 'Information Systems Development',
+    title: 'Information System Development',
     description: 'Analyze and implement services related to information technologies.',
     image: 'https://i.imgur.com/6HOKzxF.png',
-    date: '2020 - JAN 2023',
-    certificate: ''
+    date: '2020 - DEC 2022',
+    certificate: 'Graduated'
   },
   {
     id: '2',
