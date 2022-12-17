@@ -121,7 +121,7 @@ const EducationCard: React.FC<Education> = ({
               variant={'outline'}
               leftIcon={<FaFileArchive />}
             >
-              In Process
+              Gratuated
             </Button>
           )}
         </Flex>
