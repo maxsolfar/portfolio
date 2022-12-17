@@ -317,7 +317,6 @@ const projects = [
       'Chakra UI',
       'Context API',
       'Node.js',
-      'Express'
     ],
     deploy: 'https://jtracking.vercel.app/',
     repository: 'https://github.com/maxsolfar/jtracking',
