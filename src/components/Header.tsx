@@ -142,7 +142,7 @@ function Header() {
         <Text
           fontSize={'lg'}
           textAlign={'center'}
-          w={['100%', '100%', '80%', '80%']}
+          w={['100%', '100%', '65%', '65%']}
         >
           I'm a committed developer, responsible, detail-oriented, able to search and find creative and effective solutions to challenges of different
           complexity.
