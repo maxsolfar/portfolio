@@ -144,8 +144,8 @@ function Header() {
           textAlign={'center'}
           w={['100%', '100%', '80%', '80%']}
         >
-          MERN & PERN Stack Developer, who Focus on writing clean, elegant and
-          efficient code.
+          I'm a committed developer, responsible, detail-oriented, able to search and find creative and effective solutions to challenges of different
+          complexity.
         </Text>
         <Button
           colorScheme="mainPurple"

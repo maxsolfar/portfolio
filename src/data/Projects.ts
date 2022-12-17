@@ -1,5 +1,5 @@
 const projects = [
-  {
+/*   {
     id: '001',
     titleES: 'ToDo App',
     titleEN: 'ToDo App',
@@ -31,7 +31,7 @@ const projects = [
     creationDate: '10-03-2022',
     active: true,
     color: '#EAEAEA',
-  },
+  }, */
   {
     id: '002',
     titleES: 'App del Clima',
