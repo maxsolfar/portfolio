@@ -44,7 +44,7 @@ const Banner = () => {
     {
       name: 'React Native',
       img: react,
-    },
+    },*/
   ];
   return (
     <Container maxW="container.lg" p={{ base: 5, md: 10 }}>
