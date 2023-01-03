@@ -239,7 +239,7 @@ const projects = [
       'Swagger UI',
       'MongoDB',
     ],
-    deploy: 'https://task-manager-api-rest.herokuapp.com/api/doc',
+    deploy: 'https://task-manager-api-rest-production.up.railway.app/api/doc/',
     repository: 'https://github.com/maxsolfar/task-manager-api-rest',
     image: 'https://i.imgur.com/iJctdw2.png',
     gallery: [
