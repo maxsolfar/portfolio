@@ -64,7 +64,7 @@ const Navbar = () => {
         <Image
           src={colorMode === 'dark' ? logo : logoDark}
           alt="Máximo Solis Farfan"
-          w={['140px', '140px', '150px', '160px']}
+          h={['45px', '45px', '45px', '50px']}
         />
         <Stack
           spacing={4}

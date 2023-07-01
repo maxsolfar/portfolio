@@ -4,7 +4,7 @@ import ProjectCard from './ProjectCard';
 
 const Projects = ({projects}:ProjectListProps):JSX.Element => {
   return ( 
-    <SimpleGrid columns={[1,1,2,3]} spacing={5} py={8} w={"90%"} maxW={'container.xl'}>
+    <SimpleGrid columns={[1]} spacing={5} py={8} w={"90%"} maxW={'container.xl'}>
     {projects && projects.map((project: Project) => (
       <ProjectCard 
         key={project.id}
@@ -20,6 +20,8 @@ const Projects = ({projects}:ProjectListProps):JSX.Element => {
         color = {project.color}
         repository = {project.repository}
         creationDate = {project.creationDate}
+        role = {project.role}
+        duration = {project.duration}
       />
     ))}
     </SimpleGrid>

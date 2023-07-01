@@ -18,9 +18,6 @@ const HomePageEN = (): JSX.Element => {
     <VStack minH={'100vh'}>
       <Navbar />
       <Header />
-     {/*  <Heading id="education" pt={20} pb={6}>
-        Education
-      </Heading> */}
       <Container my={8} w={"100%"} maxW={"100%"} bg={colorMode === "dark" ? "brand.primary800" : "#f3f3ff"} py={8} display={"flex"} justifyContent={"center"}>
         <React.Suspense
           fallback={<DotPulse size={40} speed={1.3} color="#615AFF" />}

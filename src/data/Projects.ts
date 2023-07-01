@@ -1,76 +1,9 @@
 const projects = [
-/*   {
-    id: '001',
-    titleES: 'ToDo App',
-    titleEN: 'ToDo App',
-    descriptionEN: 'Basic App developed in React.js for ToDo management.',
-    descriptionES:
-      'App Básica desarrollada en React.js para la administración de tareas.',
-    funcionalitiesEN: [
-      'Add new tasks and type',
-      'View completed and incomplete tasks',
-      'Filter by task type',
-      'Storage of tasks added in LocalStorage',
-    ],
-    funcionalitiesES: [
-      'Añadir nuevas tareas y su tipo',
-      'Ver tareas completas y sin completar',
-      'Filtrado por tipo de tarea',
-      'Retención de tareas añadidas en LocalStorage',
-    ],
-    tools: ['React.js', 'Css Modules'],
-    deploy: 'https://maxsolfar.github.io/react-todo-app/',
-    repository: 'https://github.com/maxsolfar/react-todo-app',
-    image: 'https://i.imgur.com/eFzTedt.png',
-    gallery: [
-      'https://i.imgur.com/ryxMNUW.png',
-      'https://www.arenismedico.com/assets/images/staff.jpg',
-      'https://www.arenismedico.com/assets/images/staff.jpg',
-    ],
-    category: 'Front End',
-    creationDate: '10-03-2022',
-    active: true,
-    color: '#EAEAEA',
-  }, */
-  {
-    id: '002',
-    titleES: 'App del Clima',
-    titleEN: 'Weather App',
-    descriptionEN:
-      'App developed in React.js to search the weather in any city using the Openweathermap API.',
-    descriptionES:
-      'App desarrollada en React.js para la busqueda del clima de cualquier ciudad consumiendo la API Openweathermap',
-    funcionalitiesEN: [
-      'Weather search by city',
-      'Storage of cities searched in LocalStorage',
-      'Card sorting (Drag and Drop)',
-      'Weekly detail of weather in cities',
-    ],
-    funcionalitiesES: [
-      'Búsqueda del clima por ciudad',
-      'Ordenamiento de cards (Drag and Drop)',
-      'Retención de ciudades buscadas en LocalStorage',
-      'Detalle semanal del clima en las ciudades',
-    ],
-    tools: ['React.js', 'Css Modules'],
-    deploy: 'https://maxsolfar.github.io/react-weather-app/',
-    repository: 'https://github.com/maxsolfar/react-weather-app',
-    image: 'https://i.imgur.com/CFigOrv.png',
-    gallery: [
-      'https://i.imgur.com/pR6C7Dl.png',
-      'https://www.arenismedico.com/assets/images/staff.jpg',
-      'https://www.arenismedico.com/assets/images/staff.jpg',
-    ],
-    category: 'Front End',
-    creationDate: '15-04-2022',
-    active: true,
-    color: '#CAFEFF',
-  },
   {
     id: '003',
     titleES: 'App de películas',
     titleEN: 'Movies App',
-    descriptionEN: 'App developed in React.js & Redux using the MovieDB API.',
+    descriptionEN: 'I have created a powerful application utilizing React.js and Redux for the front-end, Node.js and Express for the back-end, and PostgreSQL as the database. The application seamlessly integrates with the MovieDB API, providing users with a dynamic and interactive experience.',
     descriptionES:
       'App desarrollada en React.js y Redux, consumiendo la API MovieDB',
     funcionalitiesEN: [
@@ -81,7 +14,7 @@ const projects = [
       'Búsqueda de películas por nombre',
       'Guardado de películas favoritas en estado global (Redux)',
     ],
-    tools: ['React.js', 'Redux', 'Css Modules'],
+    tools: ['React.js', 'Redux', 'Css Modules', 'Node.js', 'Express.js', 'PostgreSQL', 'MovieDB API'],
     deploy: '',
     repository: 'https://github.com/maxsolfar/movies-app',
     image: 'https://i.imgur.com/4YeibeS.png',
@@ -94,13 +27,15 @@ const projects = [
     creationDate: '05-07-2022',
     active: true,
     color: '#D4D4FF',
+    role: 'Full Stack Developer',
+    duration: '2 months',
   },
   {
     id: '004',
     titleES: 'Rick & Morty App',
     titleEN: 'Rick & Morty App',
     descriptionEN:
-      'React JS app, uses and adds new functionality to the Rick & Morty API.',
+      `I have developed a React.js frontend application that enhances the functionality of the Rick & Morty API. The backend is built with Node.js, Express, and PostgreSQL, enabling seamless integration and enhanced features.`,
     descriptionES:
       'App en React.js, consume y agrega nuevas funcionalidades a la API de Rick & Morty.',
     funcionalitiesEN: [
@@ -118,6 +53,7 @@ const projects = [
       'Redux',
       'PostgreSQL',
       'Node.js',
+      'Express.js'
     ],
     deploy: 'https://rick-and-morty-app-zeta-ten.vercel.app/',
     repository: 'https://github.com/maxsolfar/rick-and-morty-app',
@@ -131,13 +67,15 @@ const projects = [
     creationDate: '20-07-2022',
     active: true,
     color: '#D4D4FF',
+    role: 'Full Stack Developer',
+    duration: '2 months',
   },
   {
     id: '005',
     titleES: 'Game Flix App',
     titleEN: 'Game Flix App',
     descriptionEN:
-      'React JS app, uses and adds new functionality to the Rawg.io API.',
+      'I have created a React.js application that utilizes and extends the functionality of the Rawg.io API. The app incorporates new features and enhancements while leveraging React.js for the frontend development.',
     descriptionES:
       'App en React.js, consume y agrega nuevas funcionalidades a la API (rawg.io)',
     funcionalitiesEN: [
@@ -170,13 +108,15 @@ const projects = [
     creationDate: '20-07-2022',
     active: true,
     color: '#D4D4FF',
+    role: 'Full Stack Developer',
+    duration: '2 months',
   },
   {
     id: '006',
     titleES: 'CookIt App',
     titleEN: 'CookIt App',
     descriptionEN:
-      'Cooking recipes app developed in React.js, makes use of the Spoonacular API.',
+      'I have developed a cooking recipes app using React.js for the frontend, and Laravel and PHP for the backend. The app makes use of the Spoonacular API to provide a diverse collection of recipes and related information.',
     descriptionES:
       'App de recetas de cocina desarrollada en React.js, hace uso de la API Spoonacular',
     funcionalitiesEN: [
@@ -211,13 +151,15 @@ const projects = [
     creationDate: '10-08-2022',
     active: true,
     color: '#D4D4FF',
+    role: 'Full Stack Developer',
+    duration: '2 months',
   },
   {
     id: '007',
     titleES: 'Administrador de Tareas API',
     titleEN: 'Task Manager API',
     descriptionEN:
-      'API REST developed in node.js & mongodb, includes token authentication and refresh token.',
+      'I have developed a RESTful API using Node.js and MongoDB, implementing token-based authentication with JWT (JSON Web Tokens). The API includes token authentication and refresh token functionality, and for documentation purposes, I have utilized Express Validator and Swagger.',
     descriptionES:
       'API REST desarrollada en node.js y mongodb, incluye authentificación por Token y refresh Token.',
     funcionalitiesEN: [
@@ -251,13 +193,16 @@ const projects = [
     creationDate: '26-08-2022',
     active: true,
     color: '#D4D4FF',
+    role: 'Back-End Developer',
+    duration: '2 months',
   },
   {
     id: '008',
     titleES: 'Medic App',
     titleEN: 'Medic App',
     descriptionEN:
-      'Online platform that connects patients and doctors of different specialities.',
+      `
+      I led front-end development for a platform connecting patients with specialized doctors, utilizing React.js, Redux Toolkit, and Chart.js for real-time charts. I designed a responsive layout using Figma and Tailwind CSS, and implemented efficient email data delivery with NodeMailer and SendGrid tools.`,
     descriptionES:
       'Plataforma que conecta a pacientes y médicos de distintas especialidades, agendar citas médicas y agenda online.',
     funcionalitiesEN: [
@@ -291,13 +236,15 @@ const projects = [
     creationDate: '29-09-2022',
     active: true,
     color: '#D4D4FF',
+    role: 'Front-End Developer',
+    duration: '2 months',
   },
   {
     id: '009',
     titleES: 'JTracking',
     titleEN: 'JTracking',
     descriptionEN:
-      'Application to Job Tracking System with React.js & Node.js',
+      'I built a Job Tracking System application using React.js for the front-end and Node.js with TypeScript for the back-end. The application utilizes React, Context API, and Tailwind CSS to deliver a seamless and visually appealing user experience.',
     descriptionES:
       'Sistema de trackeo de aplicaciones a trabajos con React & Node.js',
     funcionalitiesEN: [
@@ -330,6 +277,8 @@ const projects = [
     creationDate: '01-12-2022',
     active: true,
     color: '#D4D4FF',
+    role: 'Full Stack Developer',
+    duration: '2 months',
   },
 ];
 

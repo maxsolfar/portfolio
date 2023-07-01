@@ -25,7 +25,7 @@ function Header() {
   // Function will execute on click of button
   const onButtonClick = () => {
     // using Java Script method to get PDF file
-    fetch('cv-maxsolfar.pdf').then((response) => {
+    fetch('maximo-solis-english-cv.pdf').then((response) => {
       response.blob().then((blob) => {
         // Creating new object of PDF file
         const fileURL = window.URL.createObjectURL(blob);
@@ -144,8 +144,7 @@ function Header() {
           textAlign={'center'}
           w={['100%', '100%', '65%', '65%']}
         >
-          I'm a committed developer, responsible, detail-oriented, able to search and find creative and effective solutions to challenges of different
-          complexity.
+          I'm a Full Stack Developer with over 2 years of experience. I am committed to continuous professional growth and adapting to a constantly evolving environment to make a significant impact on projects, delivering high-quality results.
         </Text>
         <Button
           colorScheme="mainPurple"
