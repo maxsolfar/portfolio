@@ -32,6 +32,8 @@ export interface Project {
   category: string;
   creationDate: string;
   color: string;
+  role: string;
+  duration: string;
 }
 
 

@@ -19,6 +19,7 @@ import react from '../assets/skills/react.svg';
 import redux from '../assets/skills/redux.svg';
 import css from '../assets/skills/css.svg';
 import html from '../assets/skills/html.svg';
+import sass from '../assets/skills/sass.svg';
 import chakra from '../assets/skills/chakra.svg';
 import tailwind from '../assets/skills/tailwind.svg';
 import node from '../assets/skills/node.svg';
@@ -30,7 +31,11 @@ import sequelize from '../assets/skills/sequelize.svg';
 import jwt from '../assets/skills/jwt.svg';
 import swagger from '../assets/skills/swagger.svg';
 import git from '../assets/skills/git.svg';
-
+import php from '../assets/skills/php.svg';
+import laravel from '../assets/skills/laravel.svg';
+import nest from '../assets/skills/nest.svg';
+import docker from '../assets/skills/docker.svg';
+import aws from '../assets/skills/aws.svg';
 
 const SkillSlider = () => {
   const { colorMode } = useColorMode();
@@ -56,6 +61,10 @@ const SkillSlider = () => {
       img: html,
     },
     {
+      name: 'Sass',
+      img: sass,
+    },
+    {
       name: 'Chakra UI',
       img: chakra,
     },
@@ -70,10 +79,6 @@ const SkillSlider = () => {
   ];
   const skillsBackEnd = [
     {
-      name: 'Git',
-      img: git,
-    },
-    {
       name: 'Node.js',
       img: node,
     },
@@ -82,12 +87,32 @@ const SkillSlider = () => {
       img: express,
     },
     {
+      name: 'Nest.js',
+      img: nest,
+    },
+    {
+      name: 'PHP',
+      img: php,
+    },
+    {
+      name: 'Laravel',
+      img: laravel,
+    },
+    {
       name: 'Mongo DB',
       img: mongo,
     },
     {
       name: 'PostgreSQL',
       img: postgres,
+    },
+    {
+      name: 'Docker',
+      img: docker,
+    },
+    {
+      name: 'AWS',
+      img: aws,
     },
     {
       name: 'Sequelize',
@@ -101,53 +126,57 @@ const SkillSlider = () => {
       name: 'JWT',
       img: jwt,
     },
+    {
+      name: 'Git',
+      img: git,
+    },
   ];
   SwiperCore.use([Autoplay]);
   return (
     <Container
-      as={"section"}
+      as={'section'}
       w={['100%', '100%', 'container.xl', 'container.xl']}
       textAlign={'center'}
       display={'flex'}
       flexDirection={['column', 'column', 'row', 'row']}
       justifyContent={'center'}
-      alignItems={"center"}
-      flexWrap={["wrap","wrap","wrap","nowrap",]}
+      alignItems={'center'}
+      flexWrap={['wrap', 'wrap', 'wrap', 'nowrap']}
       /* pb={32} */
-      gap={[4,10,12,16]}
+      gap={[4, 10, 12, 16]}
     >
       <Container>
-        <Heading size="md" mb={4} opacity={".7"}>
+        <Heading size="md" mb={4} opacity={'.7'}>
           Front End
         </Heading>
         <Swiper
-           slidesPerView={2}
-           spaceBetween={10}
-           pagination={{
-             clickable: true,
-           }}
-           autoplay={{
-             delay: 1800,
-             disableOnInteraction: false
-           }}
-           breakpoints={{
-             640: {
-               slidesPerView: 1,
-               spaceBetween: 10,
-             },
-             768: {
-               slidesPerView: 4,
-               spaceBetween: 20,
-             },
-             1024: {
-               slidesPerView: 4,
-               spaceBetween: 20,
-             },
-             1600: {
-               slidesPerView: 4,
-               spaceBetween: 20,
-             },
-           }}
+          slidesPerView={2}
+          spaceBetween={10}
+          pagination={{
+            clickable: true,
+          }}
+          autoplay={{
+            delay: 1800,
+            disableOnInteraction: false,
+          }}
+          breakpoints={{
+            640: {
+              slidesPerView: 1,
+              spaceBetween: 10,
+            },
+            768: {
+              slidesPerView: 4,
+              spaceBetween: 20,
+            },
+            1024: {
+              slidesPerView: 4,
+              spaceBetween: 20,
+            },
+            1600: {
+              slidesPerView: 4,
+              spaceBetween: 20,
+            },
+          }}
         >
           {skillsFrontEnd &&
             skillsFrontEnd.map((skill, index) => {
@@ -178,37 +207,37 @@ const SkillSlider = () => {
         </Swiper>
       </Container>
       <Container>
-        <Heading size="md" mb={4} opacity={".5"}>
+        <Heading size="md" mb={4} opacity={'.5'}>
           Back End
         </Heading>
         <Swiper
-           slidesPerView={2}
-           spaceBetween={10}
-           pagination={{
-             clickable: true,
-           }}
-           autoplay={{
-             delay: 2000,
-             disableOnInteraction: false
-           }}
-           breakpoints={{
-             640: {
-               slidesPerView: 1,
-               spaceBetween: 10,
-             },
-             768: {
-               slidesPerView: 4,
-               spaceBetween: 20,
-             },
-             1024: {
-               slidesPerView: 4,
-               spaceBetween: 20,
-             },
-             1600: {
-               slidesPerView: 4,
-               spaceBetween: 20,
-             },
-           }}
+          slidesPerView={2}
+          spaceBetween={10}
+          pagination={{
+            clickable: true,
+          }}
+          autoplay={{
+            delay: 2000,
+            disableOnInteraction: false,
+          }}
+          breakpoints={{
+            640: {
+              slidesPerView: 1,
+              spaceBetween: 10,
+            },
+            768: {
+              slidesPerView: 4,
+              spaceBetween: 20,
+            },
+            1024: {
+              slidesPerView: 4,
+              spaceBetween: 20,
+            },
+            1600: {
+              slidesPerView: 4,
+              spaceBetween: 20,
+            },
+          }}
         >
           {skillsBackEnd &&
             skillsBackEnd.map((skill, index) => {

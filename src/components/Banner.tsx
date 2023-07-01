@@ -16,10 +16,7 @@ import {
 import { FaGithub } from 'react-icons/fa';
 import { AiOutlineTwitter } from 'react-icons/ai';
 import typescript from '../assets/skills/typescript.svg';
-import react from '../assets/skills/react.svg';
-import next from '../assets/skills/next.svg';
-import nextLight from '../assets/skills/next-light.svg';
-import python from '../assets/skills/python.svg';
+import csharp from '../assets/skills/csharp.svg';
 
 const Banner = () => {
   const { colorMode } = useColorMode();
@@ -28,23 +25,10 @@ const Banner = () => {
       name: 'TypeScript',
       img: typescript,
     },
-/*     {
-      name: 'Python',
-      img: python,
-    }, */
     {
-      name: 'React Native',
-      img: react,
+      name: 'C#',
+      img: csharp,
     },
-    /* {
-      name: 'Next Js',
-      img: next,
-      imgDark: nextLight,
-    },
-    {
-      name: 'React Native',
-      img: react,
-    },*/
   ];
   return (
     <Container maxW="container.lg" p={{ base: 5, md: 10 }}>

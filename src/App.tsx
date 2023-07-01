@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { HomePageEN, HomePageES } from './pages/';
 import { getAllProjects, getAllResume } from './redux/actions/actionsProjects';
 import { useAppDispatch } from './redux/hooks/redux-hooks';
+import "./App.css";
 
 export const App = () => {
   const dispatch = useAppDispatch();
